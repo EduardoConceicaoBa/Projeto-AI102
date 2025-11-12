@@ -1,0 +1,37 @@
+1.Como funciona a lógica de falar no código de reconhecimento de fala?
+O reconhecimento de fala é feito com o serviço Azure Cognitive Services Speech. A lógica segue estes passos:
+
+Etapas principais:
+O microfone é ativado com use_default_microphone=True.
+
+O objeto SpeechRecognizer escuta o usuário com recognize_once_async().get().
+
+O resultado é analisado para verificar se o reconhecimento foi bem-sucedido.
+
+Variável que contém o texto ouvido:
+python
+speech.text
+Esse é o conteúdo reconhecido pela IA — ou seja, o que você falou e foi convertido em texto.
+
+No código integrado, esse valor é armazenado em:
+
+python
+input_text = ouvir_do_microfone()
+
+
+ 2. Como funciona a lógica de mandar um texto para o ChatGPT no código?
+O envio para o ChatGPT (via Azure OpenAI) é feito com o método:
+
+python
+client.chat.completions.create(...)
+ Etapas principais:
+O texto do usuário é adicionado ao histórico messages_array.
+
+Esse histórico é enviado para o modelo com o parâmetro messages=messages_array.
+
+A IA responde com base nesse histórico.
+
+Variável que contém o texto que a IA vai ler:
+python
+input_text
+Esse é o texto que o usuário forneceu — seja por digitação ou por voz — e que será interpretado pela IA.
