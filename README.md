@@ -15,8 +15,8 @@ Arquitetura simples e organizada em pastas
  Estrutura do Projeto
 O arquivo principal do projeto está localizado em:
 Reconhecimento_OpenAI/
-└── Chat_Completo/
-    └── Chat.py   ← Arquivo principal
+ Chat_Completo/
+   Chat.py   ← Arquivo principal
 
  Como Executar
 Abra a pasta do projeto.
