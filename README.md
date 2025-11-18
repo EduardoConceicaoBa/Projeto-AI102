@@ -23,4 +23,5 @@ O sistema processa a entrada do usuário, interpreta a mensagem e gera uma respo
 ## 📁 Estrutura do Projeto
 
 O arquivo principal do projeto está localizado em:
+Reconhecimento_OpenAI -> ChatCompleto -> chat.py
 
